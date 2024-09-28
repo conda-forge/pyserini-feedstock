@@ -1,5 +1,5 @@
 {% set name = "pyserini" %}
-{% set version = "0.38.0" %}
+{% set version = "0.39.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyserini-{{ version }}.tar.gz
-  sha256: 4a376721aa1509485bf5dc5b124b6ea33917bd1ab10d77d7da610c5ee65a55e5
+  sha256: 540c03c47b17d72d868ea54002a9ac48fcf1764ecdc5888477ba22d133b0fc46
   patches:
     - setup.patch
 
