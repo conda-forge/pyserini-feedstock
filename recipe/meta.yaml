@@ -25,6 +25,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - faiss >1.7.0
     - flask >3.0
