@@ -1,5 +1,5 @@
 {% set name = "pyserini" %}
-{% set version = "0.39.0" %}
+{% set version = "0.40.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyserini-{{ version }}.tar.gz
-  sha256: 540c03c47b17d72d868ea54002a9ac48fcf1764ecdc5888477ba22d133b0fc46
+  sha256: ea17f6ff6fa49961d8d1a2ed1d28823a08bf84ed5b25a2164f7457e4e2d7358d
   patches:
     - setup.patch
 
@@ -26,16 +26,20 @@ requirements:
     - python
     - pip
   run:
+    - faiss >1.7.0
+    - flask >3.0
+    - pytorch >=2.0.0
+    - requests
     - python
     - cython >=0.29.21
     - numpy >=1.18.1
     - pandas >=1.4.0
-    - pyjnius >=1.4.0
+    - pyjnius >=1.6.0
     - scikit-learn >=0.22.1
     - scipy >=1.4.1
     - tqdm
     - transformers >=4.6.0
-    - sentencepiece >=0.1.95
+    - sentencepiece >=0.2
     - nmslib >=2.0.6
     - onnxruntime >=1.8.1
     - lightgbm >=3.3.2
