@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyserini-{{ version }}.tar.gz
   sha256: 78141f2265ee45a84231724a91939fbe919db4ebd3e1fc12fe2b263bbd9af774
-  patches:
-    - setup.patch
 
 build:
   skip: true  # [py<310 or py>311]
