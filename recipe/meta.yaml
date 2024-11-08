@@ -1,5 +1,5 @@
 {% set name = "pyserini" %}
-{% set version = "0.41.0" %}
+{% set version = "0.42.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyserini-{{ version }}.tar.gz
-  sha256: 78141f2265ee45a84231724a91939fbe919db4ebd3e1fc12fe2b263bbd9af774
+  sha256: 47c3e8ee9bf9f60920858ad99844b608dc187ea236a4322b2b7e0b6295eaaed5
 
 build:
   skip: true  # [py<310 or py>311]
@@ -27,7 +27,7 @@ requirements:
   run:
     - faiss >1.7.0
     - flask >3.0
-    - pytorch >=2.5.0
+    - pytorch >=2.4.0
     - requests
     - python
     - cython >=0.29.21
