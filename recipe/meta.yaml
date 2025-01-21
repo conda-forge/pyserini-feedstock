@@ -10,7 +10,6 @@ source:
   sha256: bb6bf1f02ef32d617b6d2235715f4ca9b091d102a33521962fb12474971ac1d5
 
 build:
-  skip: true  # [py<310 or py>311]
   skip: ture  # [not linux]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
