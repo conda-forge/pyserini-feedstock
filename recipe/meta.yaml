@@ -1,5 +1,5 @@
 {% set name = "pyserini" %}
-{% set version = "0.43.0" %}
+{% set version = "0.44.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyserini-{{ version }}.tar.gz
-  sha256: b23bda55d2e5d1a8e6cabe5faa6d4f2503bf296fbcb334fc8f0675c4dcd264e1
+  sha256: bb6bf1f02ef32d617b6d2235715f4ca9b091d102a33521962fb12474971ac1d5
 
 build:
   skip: true  # [py<310 or py>311]
-  skip: ture  # [not linux]
+  skip: true  # [not linux]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -31,6 +31,7 @@ requirements:
     - requests
     - python
     - cython >=0.29.21
+    - cython-blis <1
     - numpy >=1.18.1
     - pandas >=1.4.0
     - pyjnius >=1.6.0
