@@ -10,7 +10,8 @@ source:
   sha256: bb6bf1f02ef32d617b6d2235715f4ca9b091d102a33521962fb12474971ac1d5
 
 build:
-  skip: ture  # [not linux]
+  skip: true  # [not linux]
+  skip: true  # [py==39]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -30,7 +31,7 @@ requirements:
     - requests
     - python
     - cython >=0.29.21
-    - numpy >=1.18.1
+    - numpy >=2
     - pandas >=1.4.0
     - pyjnius >=1.6.0
     - scikit-learn >=0.22.1
